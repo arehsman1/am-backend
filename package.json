@@ -1,0 +1,29 @@
+{
+  "name": "matchmaking-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "cd admin && npm install && npm run build && cp -r dist ../public",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "dev:admin": "cd admin && npm run dev"
+  },
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.8",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": { "nodemon": "^3.0.2" }
+}

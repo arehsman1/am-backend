@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply bg-base text-white font-body; -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-base-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-surface-border rounded-full; }
+}
+@layer components {
+  .card { @apply bg-surface rounded-xl border border-surface-border shadow-card; }
+  .btn-primary { @apply bg-accent text-black font-semibold px-4 py-2 rounded-lg hover:bg-accent-muted transition-all text-sm; }
+  .btn-danger  { @apply bg-danger/10 text-danger border border-danger/30 font-semibold px-4 py-2 rounded-lg hover:bg-danger/20 transition-all text-sm; }
+  .btn-ghost   { @apply bg-surface-light text-gray-300 border border-surface-border font-medium px-4 py-2 rounded-lg hover:border-accent/50 hover:text-white transition-all text-sm; }
+  .input { @apply bg-base-100 border border-surface-border text-white placeholder-gray-500 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/20 transition-all; }
+  .badge-success { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success border border-success/20; }
+  .badge-danger  { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-danger/10  text-danger  border border-danger/20; }
+  .badge-warn    { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-warn/10    text-warn    border border-warn/20; }
+  .badge-info    { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-info/10    text-info    border border-info/20; }
+  .badge-muted   { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-surface-light text-gray-400 border border-surface-border; }
+}
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp 0.3s ease forwards; }
